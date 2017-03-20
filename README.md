@@ -1,2 +1,2 @@
 # simright calculixir
-## simright-calculixir is a containerized calculix.
+## calculixir is a containerized calculix by simright.
