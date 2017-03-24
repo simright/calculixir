@@ -2,7 +2,7 @@ FROM daocloud.io/debian:jessie
 
 MAINTAINER Wells Jia <wells.jia@simright.com>
 
-VOLUME /data
+VOLUME data
 
 RUN mkdir -p /calculixir \
     && apt-get update \
