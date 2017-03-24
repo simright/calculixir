@@ -3,5 +3,5 @@
 
 > HOW TO USE
 ``` bash
-
+docker run --rm -v example:/data calculixir sample
 ```
