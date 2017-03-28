@@ -4,7 +4,7 @@
 
 ---
 
-> HOW TO USE
+> Useage
 
 * build:
 ``` bash
