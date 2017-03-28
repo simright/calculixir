@@ -2,6 +2,8 @@
 
 **calculixir is a containerized calculix by simright.**
 
+---
+
 > HOW TO USE
 
 * build:
@@ -14,3 +16,6 @@ docker build -t calculixir .
 docker run -it -v /home/simright/development/calculixir/data:/data calculixir -i /data/simple
 ```
 
+---
+
+## Enjoy :)
