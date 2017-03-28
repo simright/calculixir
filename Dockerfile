@@ -14,5 +14,4 @@ WORKDIR /calculixir
 ADD ./calculix_2.11.tar.gz /calculixir 
 
 
-ENTRYPOINT ["./calculix_2.11/bin/ccx", "-i"]
- 
+ENTRYPOINT ["./calculix_2.11/bin/ccx"]
