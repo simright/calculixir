@@ -6,7 +6,9 @@
 
 > Usage
 
+
 1. **from github**
+
 * build:
 ``` bash
 docker build -t calculixir .
@@ -18,6 +20,7 @@ docker run -it -v /home/simright/development/calculixir/data:/data calculixir -i
 ```
 
 2. **from docker hub**
+
 * pull:
 ``` bash
 docker pull simright/calculixir
