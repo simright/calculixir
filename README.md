@@ -28,7 +28,7 @@ docker pull simright/calculixir
 
 * run:
 ``` bash
-docker run -it -v /home/simright/development/calculixir/data:/data calculixir -i /data/simple
+docker run -it -v /home/simright/development/calculixir/data:/data simright/calculixir -i /data/simple
 ```
 
 ---
