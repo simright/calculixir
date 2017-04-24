@@ -6,5 +6,8 @@
     "files": [
         "./routes/index.ts",
         "./app.ts"
+    ],
+    "exclude": [
+        "node_modules"
     ]
 }
