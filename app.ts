@@ -26,12 +26,7 @@ if (env === 'development') {
 // Routes
 
 app.post('/', (req, res) => {
-    console.log("----------");
-    console.log(req);
-    console.log("==========");
-    console.log(res);
-
-
+    res.send("It's worked.")
 });
 
 

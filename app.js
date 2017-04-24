@@ -20,6 +20,7 @@ app.post('/', function (req, res) {
     console.log(req);
     console.log("==========");
     console.log(res);
+    res.send("It's worked.");
 });
 app.listen(3000, function () {
     console.log("It's running on port %d in %s mode", 3000, app.settings.env);
