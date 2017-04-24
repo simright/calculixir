@@ -4,7 +4,6 @@
         "sourceMap": true
     },
     "files": [
-        "./routes/index.ts",
         "./app.ts"
     ],
     "exclude": [
