@@ -14,9 +14,8 @@ WORKDIR /calculixir
 
 ADD . /calculixir
 
-RUN npm install --silent --save-dev -g typescript \
-    && npm install \
+RUN npm install \
     && tsc /calculixir \
 
-CMD ["node", "/calculixir/app.js"]
+CMD ["Done!"]
 # ENTRYPOINT ["./calculix_2.11/bin/ccx"]

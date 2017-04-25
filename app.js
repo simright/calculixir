@@ -1,23 +1,25 @@
-import http from 'http';
-import express from 'express';
-import morgan from 'morgan';
-import bodyParser from 'body-parser';
-import errorHandler from 'errorhandler';
-import methodOverride = require("method-override");
+var http           = require('http'           );
+var express        = require('express'        );
+var bodyParser     = require('body-parser'    );
+var errorHandler   = require('errorhandler'   );
+var methodOverride = require('method-override');
 
 
-let app = express();
+var app = express();
 
 app.use(bodyParser.json({
-	limit : config.bodyLimit
+	limit : "100kb"
 }));
 
-app.port("/", function (req, res) {
+app.post("/", function (req, res) {
+    console.log("starting...");
+    console.log(req.body);
+    console.log("done.");
     res.send("It's worked!");
 })
 
 
 app.listen(3000, function () {
     console.log("It's running on port 3000.")
-}
+});
 
