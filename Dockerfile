@@ -2,20 +2,21 @@ FROM node:7.9.0
 
 MAINTAINER Wells Jia <wells.jia@simright.com>
 
+ADD . /app
+
+WORKDIR /app
 
 RUN apt-get update \
     && apt-get install -y gfortran \
                           curl \
                           apt-transport-https \
                           openssl \
-    && mkdir -p /calculixir
+    && apt-get clean \ 
+    && apt-get autoclean \ 
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \ 
 
-WORKDIR /calculixir
 
-ADD . /calculixir
-
-RUN npm install \
-    && tsc /calculixir \
+RUN npm install 
 
 CMD ["Done!"]
-# ENTRYPOINT ["./calculix_2.11/bin/ccx"]
+
