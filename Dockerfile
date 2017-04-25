@@ -14,9 +14,5 @@ RUN apt-get update \
     && apt-get clean \ 
     && apt-get autoclean \ 
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \ 
-
-
-RUN npm install 
-
-CMD ["Done!"]
+    && npm install
 
