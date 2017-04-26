@@ -6,8 +6,7 @@ var errorHandler   = require('errorhandler'   );
 var methodOverride = require('method-override');
 
 
-// const ccx = "/app/calculix_2.11/calculix_2.11/bin/ccx";
-const ccx = "/home/simright/calculix_2.11/bin/ccx";
+const ccx = "/app/calculix_2.11/calculix_2.11/bin/ccx";
 
 
 var app = express();
@@ -28,6 +27,7 @@ app.post("/", function (req, res) {
             console.log('Error code: ' + error.code);
         }
         console.log('Child Process STDOUT: ' + stdout);
+        // TODO: close exec
      });
 
     // let calculix = subprocess.spawn(ccx, ['-i', req.body['data']]);
