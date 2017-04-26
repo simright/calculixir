@@ -16,6 +16,11 @@ app.use(bodyParser.json({
 }));
 
 app.post("/", function (req, res) {
+    console.log("----------");
+
+    console.log(req.body);
+
+    console.log("----------")
     let calculix = subprocess.spawn(ccx, ['-i', req.body['data']]);
     calculix.stdout.on('data', function (data) {
         res.send("It's worked!"); 
