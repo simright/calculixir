@@ -6,7 +6,8 @@ var errorHandler   = require('errorhandler'   );
 var methodOverride = require('method-override');
 
 
-const ccx = "/app/calculix_2.11/bin/ccx";
+// const ccx = "/app/calculix_2.11/calculix_2.11/bin/ccx";
+const ccx = "/home/simright/calculix_2.11/bin/ccx";
 
 
 var app = express();
@@ -16,31 +17,37 @@ app.use(bodyParser.json({
 }));
 
 app.post("/", function (req, res) {
+
     console.log("----------");
-
     console.log(req.body);
-
     console.log("----------")
-    let calculix = subprocess.spawn(ccx, ['-i', req.body['data']]);
-    calculix.stdout.on('data', function (data) {
-        res.send("It's worked!"); 
-        res.status(200);
-    });
 
-    calculix.stderr.on('data', function (data) {
-        res.send("Error!"); 
-        res.status(500);
-    });
+    subprocess.exec(`${ccx} ${req.body['data']}`, function(error, stdout, stderr){
+        if (error) {
+            console.log(error.stack);
+            console.log('Error code: ' + error.code);
+        }
+        console.log('Child Process STDOUT: ' + stdout);
+     });
 
-    calculix.on('close', function (code) {
-        if (code === 0) {
-            res.send("solveFinished");
-            res.status(200);
-        } else if (code == 31) {
-            res.send("meshFailed");
-            res.status(500);
-        } 
-    });
+    // let calculix = subprocess.spawn(ccx, ['-i', req.body['data']]);
+    // calculix.stdout.on('data', function (data) {
+    //     // return res.status(201).send({"meshing...": "Wait a moment please."})
+    // });
+
+    // calculix.stderr.on('data', function (data) {
+    //     // res.status(500).send({"Failed": "Error!"}); 
+    // });
+
+    // calculix.on('close', function (code) {
+    //     if (code === 0) {
+    //         console.log("------------------");
+    //         res.status(200).send({"OK":"OK!"});
+    //     } else if (code == 31) {
+    //         console.log(">>>>>>>>>>>>>>>>>>");
+    //         res.sendStatus(500);
+    //     } 
+    // });
 })
 
 

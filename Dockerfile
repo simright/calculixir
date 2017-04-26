@@ -3,6 +3,8 @@ FROM node:7.9.0
 MAINTAINER Wells Jia <wells.jia@simright.com>
 
 ADD . /app
+ADD calculix_2.11.tar.gz /app/calculix_2.11
+
 
 WORKDIR /app
 
