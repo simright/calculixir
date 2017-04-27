@@ -13,6 +13,7 @@ RUN apt-get update \
                           curl \
                           apt-transport-https \
                           openssl \
+                          tree \
     && apt-get clean \ 
     && apt-get autoclean \ 
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \ 
