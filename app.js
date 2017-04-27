@@ -1,6 +1,10 @@
-var express        = require('express'        );
-var bodyParser     = require('body-parser'    );
-var subprocess     = require('child_process'  );
+"use strict";
+
+/* author: Wells Jia */
+
+var express    = require('express'      );
+var bodyParser = require('body-parser'  );
+var subprocess = require('child_process');
 
 
 const ccx = "/app/calculix_2.11/calculix_2.11/bin/ccx";
