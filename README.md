@@ -4,6 +4,7 @@
 
 * run:
 ``` bash
+cd calculixir/
 sudo docker-compose up
 ```
 
