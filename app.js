@@ -12,6 +12,12 @@ app.use(bodyParser.json({
 }));
 
 app.post("/", function (req, res) {
+    
+    console.log('########################');
+    console.log(`The calculix ccx path is ${ccx}.`);
+    console.log(`The data is ${req.body['data']}`);
+    console.log('#### Data received. ####');
+    console.log('########################');
 
     var calculix = subprocess.exec(`${ccx} ${req.body['data']}`, {});
         
