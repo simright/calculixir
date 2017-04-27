@@ -44,5 +44,5 @@ app.post("/", function (req, res) {
 
 
 app.listen(3000, function () {
-    console.log("It's running on port 3000.");
+    console.log("Calculixir is running on port 3000.");
 });
