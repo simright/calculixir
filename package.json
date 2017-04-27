@@ -4,9 +4,6 @@
   "private": false,
   "dependencies": {
     "body-parser": "^1.14.1",
-    "ejs": ">= 0.5.0",
-    "errorhandler": "^1.4.2",
-    "express": "^4.13.3",
-    "method-override": "^2.3.5"
+    "express": "^4.13.3"
   }
 }
