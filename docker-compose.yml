@@ -1,0 +1,14 @@
+version: "2.0"
+
+services:
+  calculixir:
+      image: simright/calculixir
+      volumes:
+          # "host volumes:container volumes"
+          - "/home/simright/development/workroot:/app/data"
+      entrypoint:
+          - bash
+          - /app/docker-entrypoint.sh 
+      ports:
+          - "3000:3000"
+
