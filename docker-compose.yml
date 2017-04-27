@@ -10,5 +10,6 @@ services:
           - bash
           - /app/docker-entrypoint.sh 
       ports:
+          # "host ports:container ports"
           - "3000:3000"
 
