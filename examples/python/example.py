@@ -5,11 +5,11 @@
 import requests
 import pprint
 
-url = "http://127.0.0.1:3000"
-payload = {"data": "/app/data/demo/simple"}
+httpd_calculix_url = "http://127.0.0.1:3000"
+payload = "/app/data/demo/simple"
 
 
-r = requests.post(url, json=payload)
+r = requests.post(httpd_calculix_url, json={"data": payload})
 
 print "-" * 45
 print "Response status code is %s " % r.status_code
