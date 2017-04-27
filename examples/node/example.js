@@ -1,3 +1,5 @@
+"use strict";
+
 /* author: Wells Jia */
 
 var request = require('request')
@@ -27,6 +29,7 @@ request.post({
 
 });
 
-// a POST request will be sent to http://127.0.0.1:3000
-// with body an application/json body:
- 
+/* 
+ * a POST request will be sent to http://127.0.0.1:3000
+ * with body an application/json body.
+ */
