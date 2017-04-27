@@ -1,0 +1,8 @@
+{
+  "name": "calculixir_example",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "request": ""
+  }
+}
