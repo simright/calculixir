@@ -1,2 +1,6 @@
 node_modules/
 spooles.out
+.idea/
+.history/
+.vscode/
+

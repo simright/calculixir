@@ -5,11 +5,10 @@ services:
       image: simright/calculixir
       volumes:
           # "host volumes:container volumes"
-          - "/home/simright/development/workroot:/app/data"
+          - "/home/kang/workroot:/app/data"
       entrypoint:
           - bash
           - /app/docker-entrypoint.sh 
       ports:
           # "host ports:container ports"
           - "3000:3000"
-

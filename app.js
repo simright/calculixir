@@ -30,14 +30,14 @@ app.post("/", function (req, res) {
         });
 
         calculix.stderr.on('data', function (data)  {
-            return res.status(500).send({"Failed": "Error!"}); 
+            return res.status(500).send({"errMsg": data}); 
         });
 
         calculix.on('exit', function (code) {
             if (code === 0) {
-                res.status(200).send({"OK!":"OK!"});
-            } else if (code == 31) {
-                res.status(500).send({"failed":"failed"});
+                res.status(200).send({});
+            } else {
+                res.status(500).send({"errCode": code});
             }
         });
 });
