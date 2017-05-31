@@ -5,12 +5,12 @@
 var request = require('request')
 
 
-const httpd_calculix_url = "http://127.0.0.1:3000";
-const payload = "/app/data/demo/simple";
+const HttpdCalculixUrl = "http://127.0.0.1:3000";
+const payload = "/workroot/simple";
 
 
 request.post({
-     url: httpd_calculix_url,
+     url: HttpdCalculixUrl,
      headers: {
         "Content-Type": "application/json"
      },

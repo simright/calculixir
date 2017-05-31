@@ -2,7 +2,7 @@ FROM node:7.9.0
 
 MAINTAINER Wells Jia <wells.jia@simright.com>
 
-ADD . /app
+COPY . /app
 ADD calculix_2.11.tar.gz /app/calculix_2.11
 
 
@@ -18,4 +18,3 @@ RUN apt-get update \
     && apt-get autoclean \ 
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \ 
     && npm install
-

@@ -5,7 +5,7 @@ services:
       image: simright/calculixir
       volumes:
           # "host volumes:container volumes"
-          - "/home/kang/workroot:/app/data"
+          - "./workroot:/workroot/"
       entrypoint:
           - bash
           - /app/docker-entrypoint.sh 
