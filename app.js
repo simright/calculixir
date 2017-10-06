@@ -23,7 +23,7 @@ app.post("/", function (req, res) {
     console.log('######## Data received. ########');
     console.log('################################');
 
-    var calculix = subprocess.exec(`${ccx} ${req.body['data']}`, {});
+    var calculix = subprocess.exec(`cd ${req.body['data'].substring(0, req.body['data'].lastIndexOf('/'))} && ${ccx} ${req.body['data'].split('/').pop()} && cd -`, {});
         
         calculix.stdout.on('data', function (data) {
             console.log('stdout: ' + data);
