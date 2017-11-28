@@ -43,6 +43,13 @@ app.post("/", function (req, res) {
 });
 
 
-app.listen(3000, function () {
+var server = app.listen(3000, function () {
     console.log("Calculixir is running on port 3000.");
 });
+
+server.setTimeout(36000000);
+server.on('timeout', function(){
+    console.log('----------------------------');
+    console.log('timeout error');
+    console.log('----------------------------');
+})
